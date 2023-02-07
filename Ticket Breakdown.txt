@@ -1,0 +1,55 @@
+Ticket 1: Add custom agent ID field to database
+
+  1. Acceptance Criteria:
+    - A new field named "custom_agent_id" is added to the "Agents" table in the database
+    - The field is capable of storing alphanumeric characters of a specified length
+  2. Time/Effort Estimate: 2 hours
+  3. Implementation Details:
+    - Alter the "Agents" table in the database to add a new field "custom_agent_id"
+    - Set the data type for the "custom_agent_id" field to be a string with a specified maximum length
+    - Add constraints to the field to ensure data entered is unique and not null
+
+
+Ticket 2: Update getShiftsByFacility function to return custom agent ID
+
+  1. Acceptance Criteria:
+    - The getShiftsByFacility function now returns the "custom_agent_id" field in addition to the internal database id
+    - The function correctly returns the "custom_agent_id" associated with each shift
+  2. Time/Effort Estimate: 1 hour
+  3. Implementation Details:
+    - Modify the SQL query used by the getShiftsByFacility function to include the "custom_agent_id" field
+    - Update the function's return type to include the custom agent ID
+    - Test the function to ensure it correctly returns the "custom_agent_id" field
+
+
+Ticket 3: Update generateReport function to use custom agent ID
+
+  1. Acceptance Criteria:
+    - The generateReport function now uses the custom agent ID instead of the internal database id
+    - The report generated correctly displays the custom agent ID for each shift
+  2. Time/Effort Estimate: 2 hours
+  3. Implementation Details:
+    - Modify the generateReport function to use the "custom_agent_id" field instead of the internal database id
+    - Test the function to ensure the custom agent ID is correctly displayed on the report
+
+
+Ticket 4: Add ability for Facilities to specify custom agent ID
+
+  1. Acceptance Criteria:
+    - Facilities are able to specify a custom agent ID for each Agent
+    - The custom agent ID is saved in the database
+  2. Time/Effort Estimate: 2 hours
+  3. Implementation Details:
+    - Create a new user interface for Facilities to specify the custom agent ID for each Agent
+    - Update the database to save the custom agent ID when specified by a Facility
+    - Test the user interface to ensure the custom agent ID is correctly saved in the database
+
+
+Ticket 5: Update user documentation
+
+  1. Acceptance Criteria:
+    - The user documentation accurately reflects the changes made in Tickets 1-4
+  2. Time/Effort Estimate: 1 hour
+  3. Implementation Details:
+    - Review the user documentation to ensure it accurately reflects the changes made
+    - Update the user documentation to include information on the new custom agent ID field, its use in the getShiftsByFacility function and generateReport function, and the ability for Facilities to specify custom agent IDs.
